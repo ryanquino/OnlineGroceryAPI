@@ -14,8 +14,9 @@ use App\Http\Controllers\ProductsController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
+Route::get('/getAllBestSellers', 'App\Http\Controllers\ProductsController@getAllBestSellers');
 Route::get('/getAllProducts', 'App\Http\Controllers\ProductsController@getAllProducts');
+Route::get('/getAllCategories', 'App\Http\Controllers\CategoryController@getAllCategories');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
