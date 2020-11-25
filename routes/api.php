@@ -18,6 +18,9 @@ Route::get('/getAllBestSellers', 'App\Http\Controllers\ProductsController@getAll
 Route::get('/getAllProducts', 'App\Http\Controllers\ProductsController@getAllProducts');
 Route::get('/getAllCategories', 'App\Http\Controllers\CategoryController@getAllCategories');
 
+Route::post('/register', 'App\Http\Controllers\UserController@register');
+Route::post('/login', 'App\Http\Controllers\UserController@login');
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
