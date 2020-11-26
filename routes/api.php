@@ -17,6 +17,7 @@ use App\Http\Controllers\ProductsController;
 Route::get('/getAllBestSellers', 'App\Http\Controllers\ProductsController@getAllBestSellers');
 Route::get('/getAllProducts', 'App\Http\Controllers\ProductsController@getAllProducts');
 Route::get('/getAllCategories', 'App\Http\Controllers\CategoryController@getAllCategories');
+Route::get('/getProfile', 'App\Http\Controllers\UserController@getProfile');
 
 Route::post('/register', 'App\Http\Controllers\UserController@register');
 Route::post('/login', 'App\Http\Controllers\UserController@login');

@@ -50,4 +50,11 @@ class UserController extends Controller
 
         return response()->json(compact('token'));
     }
+
+    public function getProfile(){
+    	if(! $user = JWTAuth::parseToken()->authenticate()){
+    		return response()->json(['user not found'], 404);
+    	}
+    	return response()->json(compact('user'));
+    }
 }
